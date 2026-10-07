@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using UnityEngine;
 
 namespace HotkeyMod
@@ -23,16 +23,16 @@ namespace HotkeyMod
 
                     if (t.name == "text")
                     {
-                        if (pn == "ShovelBank") nw = "Клавиша: " + Mod.ShovelKey;
-                        else if (pn == "GloveBank") nw = "Клавиша: " + Mod.GloveKey;
-                        else if (pn == "HammerBank") nw = "Клавиша: " + Mod.HammerKey;
-                        else if (pn == "WheelBank") nw = "Клавиша: " + Mod.WheelKey;
-                        else if (pn == "SlowTrigger") nw = "Замедление (" + Mod.SlowKey + ")";
+                        if (pn == "ShovelBank") nw = "Клавиша: " + Mod.Name("Shovel");
+                        else if (pn == "GloveBank") nw = "Клавиша: " + Mod.Name("Glove");
+                        else if (pn == "HammerBank") nw = "Клавиша: " + Mod.Name("Hammer");
+                        else if (pn == "WheelBank") nw = "Клавиша: " + Mod.Name("Wheel");
+                        else if (pn == "SlowTrigger") nw = "Замедление (" + Mod.Name("Slow") + ")";
                         else if (pn == "ShowCards" && old.Contains("\u80cc\u5305")) nw = "Рюкзак (B)";
                     }
                     else if (t.name == "BeanCount")
                     {
-                        nw = old.Replace("(E)", "(" + Mod.GoldBeanKey + ")");
+                        nw = old.Replace("(E)", "(" + Mod.Name("GoldBean") + ")");
                     }
 
                     if (nw != null && nw != old) t.text = nw;
